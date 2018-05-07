@@ -1,0 +1,27 @@
+<div class="well">
+  <form #empForm="ngForm" ngNativeValidate (ngSubmit)="add(empForm)" >
+    <div class="form-group">
+      <label>Employee ID</label>
+      <input id="EmpId" [(ngModel)]="employee.EmpId" autocomplete="off" type="text" required class="form-control  is-invalid" name="EmpId">
+      <div class="alert alert-warning" role="alert" *ngIf="invalid() && empForm.dirty">
+          <strong>Validation Falied!</strong> Employee ID should be interger and less than 10 digits.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input id="Name" type="text" [(ngModel)]="employee.Name" required class="form-control" name="Name">
+    </div>
+    <div class="form-group">
+      <label>Company</label>
+      <input id="Company" type="text" [(ngModel)]="employee.Company" required class="form-control" name="Company">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" type="submit" [disabled]="!empForm.valid || invalid()">
+        <i class="fa fa-floppy-o"></i>
+        Submit</button>
+      <button class="btn btn-default" type="reset">
+        <i class="fa fa-repeat"></i>
+        Reset</button>
+    </div>
+  </form>
+  </div>

@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Emplyee ID</th>
+            <th>Name</th>
+            <th>Company</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let d of employeeCollection; let i = index">
+            <td>{{d.Id}}</td>
+            <td>{{d.EmpId}}</td>
+            <td>{{d.Name}}</td>
+            <td>{{d.Company}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

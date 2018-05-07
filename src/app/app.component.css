@@ -1,0 +1,9 @@
+.hide{
+  visibility: hidden;
+  position: absolute;
+}
+
+.show{
+  visibility: none;
+  position: sticky;
+}
